@@ -8,6 +8,10 @@
 
 ![Screenshot](./screenshot.png)
 
+Get random quotes in terminal.
+
+This project fetch the [Quotable.io API](https://api.quotable.io/random).
+
 ## Installation
 
 ```bash
