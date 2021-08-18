@@ -31,3 +31,5 @@ This project is Licensed under the [MIT](./LICENSE.md) License.
 ### Alternative
 
 I also developed this in [Node.js](https://github.com/UltiRequiem/ranmess) and [Python](https://github.com/UltiRequiem/quoteran).
+
+![Screenshot 2](https://i.imgur.com/7ZX1ZKj.png)
