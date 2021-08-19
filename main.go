@@ -9,11 +9,11 @@ import (
 )
 
 type Quotable struct {
-	Content string
-	Author  string
+	Content string `json:"content"`
+	Author  string `json:"author"`
 }
 
-func fetch(url string) string {
+func fetch(url string) *http.Response {
 	response, getError := http.Get(url)
 
 	if getError != nil {
@@ -21,6 +21,10 @@ func fetch(url string) string {
 		os.Exit(1)
 	}
 
+	return response
+}
+
+func parseHttpResponse(response *http.Response) string {
 	responseData, readError := ioutil.ReadAll(response.Body)
 
 	if readError != nil {
@@ -32,7 +36,7 @@ func fetch(url string) string {
 }
 
 func main() {
-	var data string = fetch("https://api.quotable.io/random")
+	var data string = parseHttpResponse(fetch("https://api.quotable.io/random"))
 
 	var parsedData Quotable
 	json.Unmarshal([]byte(data), &parsedData)
