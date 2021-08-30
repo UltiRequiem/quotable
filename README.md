@@ -15,7 +15,7 @@ This project fetch the [Quotable.io API](https://api.quotable.io/random).
 ## Installation
 
 ```bash
-go get github.com/UltiRequiem/quotabler
+go install github.com/UltiRequiem/quotabler@latest
 ```
 
 To be able to execute the command anywhere you need to have correctly setup your [Gopath](https://golang.org/doc/gopath_code).
