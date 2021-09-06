@@ -22,7 +22,11 @@ To be able to execute the command anywhere you need to have correctly setup your
 
 Example: [Dotfiles](https://github.com/UltiRequiem/dotfiles/blob/53fece48cc95521e67a7a9277d6146aa14fe32f3/.zshrc#L32)
 
-If you want to use it in code, install it in the normal way.
+If you want to use it in code:
+
+```bash
+go get github.com/UltiRequiem/quotabler/pkg
+```
 
 ## Usage
 
