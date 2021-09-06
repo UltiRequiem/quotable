@@ -15,11 +15,16 @@ type Quotable struct {
 	DateModified string   `json:"dateModified"`
 }
 
-func FetchQuotabler() Quotable {
+func GetQuotableObject() Quotable {
 	var data string = parseHttpResponse(fetch("https://api.quotable.io/random"))
 
 	var parsedData Quotable
 	json.Unmarshal([]byte(data), &parsedData)
 
 	return parsedData
+}
+
+func GetRandomQuoteAndAuthor() (string, string) {
+	quotableFetch := GetQuotableObject()
+	return quotableFetch.Content, quotableFetch.Author
 }

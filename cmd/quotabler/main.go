@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-	var parsedData quotabler.Quotable = quotabler.FetchQuotabler()
-	color.Cyan(" " + parsedData.Content)
-	color.Red(" - " + parsedData.Author)
+	quote, author := quotabler.GetRandomQuoteAndAuthor()
+	color.Cyan(" " + quote)
+	color.Green(" - " + author)
 }
