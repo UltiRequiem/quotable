@@ -6,7 +6,7 @@
 ![Lines Of Code](https://img.shields.io/tokei/lines/github.com/UltiRequiem/quotabler?color=blue&label=Total%20Lines)
 ![CodeQL](https://github.com/UltiRequiem/quotabler/workflows/CodeQL/badge.svg)
 
-![Screenshot](./screenshot.png)
+![Screenshot](./.github/assets/screenshot.png)
 
 Get random quotes in terminal.
 

@@ -1,12 +1,7 @@
 package main
 
-import (
-	"github.com/UltiRequiem/quotabler/pkg"
-	"github.com/fatih/color"
-)
+import "github.com/UltiRequiem/quotabler/cmd"
 
 func main() {
-	quote, author := quotabler.GetRandomQuoteAndAuthor()
-	color.Cyan(" " + quote)
-	color.Green(" - " + author)
+	cmd.Execute()
 }
