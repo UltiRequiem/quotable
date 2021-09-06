@@ -1,32 +1,25 @@
+// Exports Quotable Struct and FetchQuotabler Method
 package quotabler
 
-import (
-	"io/ioutil"
-	"log"
-	"net/http"
-)
+import "encoding/json"
 
+// Quotable API Response Schema
 type Quotable struct {
-	Content string `json:"content"`
-	Author  string `json:"author"`
+	Id           string   `json:"_id"`
+	Tags         []string `json:"tags"`
+	Content      string   `json:"content"`
+	Author       string   `json:"author"`
+	AuthorSlug   string   `json:"authorSlug"`
+	Length       int      `json:"length"`
+	DateAdded    string   `json:"dateAdded"`
+	DateModified string   `json:"dateModified"`
 }
 
-func Fetch(url string) *http.Response {
-	response, getError := http.Get(url)
+func FetchQuotabler() Quotable {
+	var data string = parseHttpResponse(fetch("https://api.quotable.io/random"))
 
-	if getError != nil {
-		log.Fatal("There was an error while doing the fetch, you may not have the internet.")
-	}
+	var parsedData Quotable
+	json.Unmarshal([]byte(data), &parsedData)
 
-	return response
-}
-
-func ParseHttpResponse(response *http.Response) string {
-	responseData, readError := ioutil.ReadAll(response.Body)
-
-	if readError != nil {
-		log.Fatal("Error reading response.")
-	}
-
-	return string(responseData)
+	return parsedData
 }
