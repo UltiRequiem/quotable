@@ -50,16 +50,18 @@ func main() {
 }
 ```
 
+### Exports
+
 This package exports 3 things:
 
-- [`Quotable`](https://github.com/UltiRequiem/quotabler/blob/main/pkg/root.go#L7)
-- [`GetQuotableObject`](https://github.com/UltiRequiem/quotabler/blob/main/pkg/root.go#L18)
-- [`GetRandomQuoteAndAuthor`](https://github.com/UltiRequiem/quotabler/blob/main/pkg/root.go#L27)
+- [`Quotable`](https://github.com/UltiRequiem/quotabler/blob/main/pkg/root.go#L7): A struct with the properties that a fetch returns to the Quotable API.
+- [`GetQuotableObject`](https://github.com/UltiRequiem/quotabler/blob/main/pkg/root.go#L18): It fetches the Quotable API, returns a [`Quotable`](https://github.com/UltiRequiem/quotabler/blob/main/pkg/root.go#L7).
+- [`GetRandomQuoteAndAuthor`](https://github.com/UltiRequiem/quotabler/blob/main/pkg/root.go#L27): Uses [`GetQuotableObject`](https://github.com/UltiRequiem/quotabler/blob/main/pkg/root.go#L18) but only returns quote and author property.
 
 ### License
 
 This project is Licensed under the [MIT](./LICENSE.md) License.
 
-### Alternative
+### Alternatives
 
 I also developed this in [Node.js](https://github.com/UltiRequiem/ranmess) and [Python](https://github.com/UltiRequiem/quoteran).
