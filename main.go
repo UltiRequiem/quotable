@@ -1,6 +1,6 @@
 package main
 
-import "github.com/UltiRequiem/quotabler/cmd"
+import "github.com/UltiRequiem/quotable/cmd"
 
 func main() {
 	cmd.Execute()

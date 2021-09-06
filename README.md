@@ -1,10 +1,10 @@
-# Quotabler
+# Quotable
 
 [![GitMoji](https://img.shields.io/badge/Gitmoji-%F0%9F%8E%A8%20-FFDD67.svg)](https://gitmoji.dev)
-[![Go Report Card](https://goreportcard.com/badge/github.com/UltiRequiem/quotabler)](https://goreportcard.com/report/github.com/UltiRequiem/quotabler)
+[![Go Report Card](https://goreportcard.com/badge/github.com/UltiRequiem/quotable)](https://goreportcard.com/report/github.com/UltiRequiem/quotabler)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-![Lines Of Code](https://img.shields.io/tokei/lines/github.com/UltiRequiem/quotabler?color=blue&label=Total%20Lines)
-![CodeQL](https://github.com/UltiRequiem/quotabler/workflows/CodeQL/badge.svg)
+![Lines Of Code](https://img.shields.io/tokei/lines/github.com/UltiRequiem/quotable?color=blue&label=Total%20Lines)
+![CodeQL](https://github.com/UltiRequiem/quotable/workflows/CodeQL/badge.svg)
 
 ![Screenshot](./.github/assets/screenshot.png)
 
@@ -15,7 +15,7 @@ A golang wrapper around the [Quotable.io API](https://api.quotable.io/random).
 If you just want to use the CLI app:
 
 ```bash
-go install github.com/UltiRequiem/quotabler@latest
+go install github.com/UltiRequiem/quotable@latest
 ```
 
 To be able to execute the command anywhere you need to have correctly setup your [Gopath](https://golang.org/doc/gopath_code).
@@ -29,7 +29,7 @@ If you want to use it in code, install it in the normal way.
 CLI:
 
 ```bash
-quotabler
+quotable
 ```
 
 Code:
@@ -38,12 +38,12 @@ Code:
 package main
 
 import (
-	"github.com/UltiRequiem/quotabler/pkg"
+	"github.com/UltiRequiem/quotable/pkg"
 	"fmt"
 )
 
 func main() {
-	quote, _ := quotabler.GetRandomQuoteAndAuthor()
+	quote, _ := quotable.GetRandomQuoteAndAuthor()
 	fmt.Println(quote)
 }
 ```
@@ -52,9 +52,9 @@ func main() {
 
 This package exports 3 things:
 
-- [`Quotable`](https://github.com/UltiRequiem/quotabler/blob/main/pkg/root.go#L7): A struct with the properties that a fetch returns to the Quotable API.
-- [`GetQuotableObject`](https://github.com/UltiRequiem/quotabler/blob/main/pkg/root.go#L18): It fetches the Quotable API, returns a [`Quotable`](https://github.com/UltiRequiem/quotabler/blob/main/pkg/root.go#L7).
-- [`GetRandomQuoteAndAuthor`](https://github.com/UltiRequiem/quotabler/blob/main/pkg/root.go#L27): Uses [`GetQuotableObject`](https://github.com/UltiRequiem/quotabler/blob/main/pkg/root.go#L18) but only returns quote and author property.
+- [`Quotable`](https://github.com/UltiRequiem/quotable/blob/main/pkg/root.go#L7): A struct with the properties that a fetch returns to the Quotable API.
+- [`GetQuotableObject`](https://github.com/UltiRequiem/quotable/blob/main/pkg/root.go#L18): It fetches the Quotable API, returns a [`Quotable`](https://github.com/UltiRequiem/quotable/blob/main/pkg/root.go#L7).
+- [`GetRandomQuoteAndAuthor`](https://github.com/UltiRequiem/quotable/blob/main/pkg/root.go#L27): Uses [`GetQuotableObject`](https://github.com/UltiRequiem/quotable/blob/main/pkg/root.go#L18) but only returns quote and author property.
 
 ### License
 

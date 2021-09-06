@@ -1,5 +1,5 @@
 // Exports Quotable Struct and FetchQuotabler Method
-package quotabler
+package quotable
 
 import "encoding/json"
 

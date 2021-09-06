@@ -1,4 +1,4 @@
-package quotabler
+package quotable
 
 import (
 	"io/ioutil"

@@ -1,4 +1,4 @@
-module github.com/UltiRequiem/quotabler
+module github.com/UltiRequiem/quotable
 
 go 1.16
 
