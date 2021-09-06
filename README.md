@@ -36,7 +36,7 @@ quotabler
 
 Code:
 
-```
+```go
 package main
 
 import (
@@ -52,9 +52,9 @@ func main() {
 
 This package exports 3 things:
 
-- `[Quotable](https://github.com/UltiRequiem/quotabler/blob/main/pkg/root.go#L7)`
-- `[GetQuotableObject](https://github.com/UltiRequiem/quotabler/blob/main/pkg/root.go#L18)`
-- `[GetRandomQuoteAndAuthor](https://github.com/UltiRequiem/quotabler/blob/main/pkg/root.go#L27)`
+- [`Quotable`](https://github.com/UltiRequiem/quotabler/blob/main/pkg/root.go#L7)
+- [`GetQuotableObject`](https://github.com/UltiRequiem/quotabler/blob/main/pkg/root.go#L18)
+- [`GetRandomQuoteAndAuthor`](https://github.com/UltiRequiem/quotabler/blob/main/pkg/root.go#L27)
 
 ### License
 
