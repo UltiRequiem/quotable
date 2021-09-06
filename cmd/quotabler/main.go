@@ -1,12 +1,12 @@
 package main
 
 import (
-	"fmt"
 	"github.com/UltiRequiem/quotabler/pkg"
+	"github.com/fatih/color"
 )
 
 func main() {
-	parsedData := quotabler.FetchQuotabler()
-	fmt.Println(" " + parsedData.Content)
-	fmt.Println(" - " + parsedData.Author)
+	var parsedData quotabler.Quotable = quotabler.FetchQuotabler()
+	color.Cyan(" " + parsedData.Content)
+	color.Red(" - " + parsedData.Author)
 }
