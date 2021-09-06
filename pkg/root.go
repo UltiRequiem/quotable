@@ -1,4 +1,4 @@
-// Exports Quotable Struct and FetchQuotabler Method
+// Package quotable exports Quotable Struct and FetchQuotabler Method
 package quotable
 
 import "encoding/json"
@@ -15,6 +15,7 @@ type Quotable struct {
 	DateModified string   `json:"dateModified"`
 }
 
+// Fetches the Quotable API.
 func GetQuotableObject() Quotable {
 	var data string = parseHttpResponse(fetch("https://api.quotable.io/random"))
 
@@ -24,6 +25,7 @@ func GetQuotableObject() Quotable {
 	return parsedData
 }
 
+// Return a random quote and author.
 func GetRandomQuoteAndAuthor() (string, string) {
 	quotableFetch := GetQuotableObject()
 	return quotableFetch.Content, quotableFetch.Author
