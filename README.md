@@ -24,7 +24,7 @@ Example: [Dotfiles](https://github.com/UltiRequiem/dotfiles/blob/53fece48cc95521
 If you want to use it in code:
 
 ```bash
-go get github.com/UltiRequiem/quotabler/pkg
+go get github.com/UltiRequiem/quotable/pkg
 ```
 
 ## Usage
