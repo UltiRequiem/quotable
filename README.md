@@ -65,4 +65,4 @@ This project is Licensed under the [MIT](./LICENSE.md) License.
 
 ### Alternatives
 
-I also developed this in [Node.js](https://github.com/UltiRequiem/ranmess) and [Python](https://github.com/UltiRequiem/quoteran).
+I also developed this in [Node.js](https://github.com/UltiRequiem/ranmess), [Rust](https://github.com/UltiRequiem/ruquotes), and [Python](https://github.com/UltiRequiem/quoteran).
