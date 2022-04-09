@@ -17,9 +17,11 @@ If you just want to use the CLI app:
 go install github.com/UltiRequiem/quotable@latest
 ```
 
-To be able to execute the command anywhere you need to have correctly setup your [Gopath](https://golang.org/doc/gopath_code).
+To be able to execute the command anywhere you need to have correctly setup your
+[Gopath](https://golang.org/doc/gopath_code).
 
-Example: [Dotfiles](https://github.com/UltiRequiem/dotfiles/blob/53fece48cc95521e67a7a9277d6146aa14fe32f3/.zshrc#L32)
+Example:
+[Dotfiles](https://github.com/UltiRequiem/dotfiles/blob/53fece48cc95521e67a7a9277d6146aa14fe32f3/.zshrc#L32)
 
 If you want to use it in code:
 
@@ -55,9 +57,15 @@ func main() {
 
 This package exports 3 things:
 
-- [`Quotable`](https://github.com/UltiRequiem/quotable/blob/main/pkg/root.go#L7): A struct with the properties that a fetch returns to the Quotable API.
-- [`GetQuotableObject`](https://github.com/UltiRequiem/quotable/blob/main/pkg/root.go#L18): It fetches the Quotable API, returns a [`Quotable`](https://github.com/UltiRequiem/quotable/blob/main/pkg/root.go#L7).
-- [`GetRandomQuoteAndAuthor`](https://github.com/UltiRequiem/quotable/blob/main/pkg/root.go#L27): Uses [`GetQuotableObject`](https://github.com/UltiRequiem/quotable/blob/main/pkg/root.go#L18) but only returns quote and author property.
+- [`Quotable`](https://github.com/UltiRequiem/quotable/blob/main/pkg/root.go#L7):
+  A struct with the properties that a fetch returns to the Quotable API.
+- [`GetQuotableObject`](https://github.com/UltiRequiem/quotable/blob/main/pkg/root.go#L18):
+  It fetches the Quotable API, returns a
+  [`Quotable`](https://github.com/UltiRequiem/quotable/blob/main/pkg/root.go#L7).
+- [`GetRandomQuoteAndAuthor`](https://github.com/UltiRequiem/quotable/blob/main/pkg/root.go#L27):
+  Uses
+  [`GetQuotableObject`](https://github.com/UltiRequiem/quotable/blob/main/pkg/root.go#L18)
+  but only returns quote and author property.
 
 ### License
 
@@ -65,4 +73,6 @@ This project is Licensed under the [MIT](./LICENSE.md) License.
 
 ### Alternatives
 
-I also developed this in [Node.js](https://github.com/UltiRequiem/ranmess), [Rust](https://github.com/UltiRequiem/ruquotes), and [Python](https://github.com/UltiRequiem/quoteran).
+I also developed this in [Node.js](https://github.com/UltiRequiem/ranmess),
+[Rust](https://github.com/UltiRequiem/ruquotes), and
+[Python](https://github.com/UltiRequiem/quoteran).

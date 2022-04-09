@@ -1,9 +1,11 @@
-// Package quotable exports Quotable Struct and FetchQuotabler Method
 package quotable
 
-import "encoding/json"
+import (
+	"encoding/json"
+	"io/ioutil"
+	"net/http"
+)
 
-// Quotable API Response Schema
 type Quotable struct {
 	Id           string   `json:"_id"`
 	Tags         []string `json:"tags"`
@@ -15,18 +17,26 @@ type Quotable struct {
 	DateModified string   `json:"dateModified"`
 }
 
-// Fetches the Quotable API.
-func GetQuotableObject() Quotable {
-	var data string = parseHttpResponse(fetch("https://api.quotable.io/random"))
+const (
+	quotableApiUrl = "https://api.quotable.io/random"
+)
+
+func GetQuotable() (Quotable, error) {
+	response, getError := http.Get(quotableApiUrl)
+
+	if getError != nil {
+		return Quotable{}, getError
+	}
+
+	responseData, readError := ioutil.ReadAll(response.Body)
+
+	if readError != nil {
+		return Quotable{}, readError
+	}
 
 	var parsedData Quotable
-	json.Unmarshal([]byte(data), &parsedData)
 
-	return parsedData
-}
+	json.Unmarshal(responseData, &parsedData)
 
-// Return a random quote and author.
-func GetRandomQuoteAndAuthor() (string, string) {
-	quotableFetch := GetQuotableObject()
-	return quotableFetch.Content, quotableFetch.Author
+	return parsedData, nil
 }
