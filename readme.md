@@ -7,6 +7,8 @@
 
 A wrapper around the [Quotable.io API](https://api.quotable.io).
 
+## Usage
+
 ```go
 import (
 	"fmt"
@@ -20,6 +22,11 @@ func main(){
         fmt.Printf("%s\n -%s\n", data.Content, data.Author)
 }
 ```
+
+## Docs
+
+Is hosted on
+[pkg.go.dev](https://pkg.go.dev/github.com/UltiRequiem/quotable/pkg) 📖
 
 ## CLI
 
