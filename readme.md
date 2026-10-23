@@ -1,6 +1,5 @@
 # Quotable
 
-[![Go Report Card](https://goreportcard.com/badge/github.com/UltiRequiem/quotable)](https://goreportcard.com/report/github.com/UltiRequiem/dadjokes)
 [![Go Reference](https://pkg.go.dev/badge/github.com/UltiRequiem/quotable/pkg.svg)](https://pkg.go.dev/github.com/UltiRequiem/dadjokes/pkg)
 
 ![Screenshot](./.github/assets/screenshot.png)
