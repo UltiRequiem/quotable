@@ -3,6 +3,7 @@ package cmd
 import (
 	"flag"
 	"fmt"
+	"os"
 	"strconv"
 	"sync"
 
@@ -11,6 +12,12 @@ import (
 )
 
 func Execute() {
+	apiURL := flag.String(
+		"api-url",
+		"",
+		fmt.Sprintf("base URL of a Quotable server (default $%s, then %s)", quotable.APIURLEnv, quotable.DefaultAPIURL),
+	)
+
 	flag.Parse()
 
 	times := flag.Arg(0)
@@ -21,28 +28,36 @@ func Execute() {
 
 	parsedTimes, errorParsingNumber := strconv.Atoi(times)
 
-	if errorParsingNumber != nil {
-		fmt.Println("The input was not a valid number.")
-		panic(errorParsingNumber)
+	if errorParsingNumber != nil || parsedTimes < 1 {
+		fmt.Fprintln(os.Stderr, "The input was not a valid number.")
+		os.Exit(1)
 	}
 
 	var wg sync.WaitGroup
+	var failed sync.Once
 
 	wg.Add(parsedTimes)
 
 	for i := 0; i < parsedTimes; i++ {
 		go func() {
-			data, error := quotable.GetQuotable()
+			defer wg.Done()
 
-			if error != nil {
-				panic(error)
+			data, err := quotable.GetQuotableFrom(*apiURL)
+
+			if err != nil {
+				failed.Do(func() {
+					fmt.Fprintf(os.Stderr, "Could not get a quote from %s.\n", quotable.BaseURL(*apiURL))
+					fmt.Fprintf(os.Stderr, "Pass -api-url or set %s to point at a running Quotable server.\n", quotable.APIURLEnv)
+					fmt.Fprintln(os.Stderr, err)
+					os.Exit(1)
+				})
+
+				return
 			}
 
 			message := fmt.Sprintf("%s\n -%s", data.Content, data.Author)
 
 			fmt.Println(chigo.Colorize(message))
-
-			wg.Done()
 		}()
 	}
 
