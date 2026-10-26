@@ -1,6 +1,7 @@
-github.com/UltiRequiem/chigo v1.4.0 h1:3QDR9FiHZPXfk0A7gqtdwEBfkDTH7LpIdQcqF60Rt3Y=
-github.com/UltiRequiem/chigo v1.4.0/go.mod h1:Bsp2C4AalTn4jfgv4XXCb5OGO/+TFxdbV3SwO7mgLH0=
+github.com/UltiRequiem/chigo v1.4.1 h1:3jnmsurBDmFFRRcysLbYwxRGg9M9d+xGxpOnsJhXYVQ=
+github.com/UltiRequiem/chigo v1.4.1/go.mod h1:OZY+ekiNV4Yhrc0ROIo/Bdo7ZJpagNMSn4TtTvV7pSo=
 github.com/mattn/go-colorable v0.1.12/go.mod h1:u5H1YNBxpqRaxsYJYSkiCWKzEfiAb1Gb520KVy5xxl4=
 github.com/mattn/go-isatty v0.0.14/go.mod h1:7GGIvUiUoEMVVmxf/4nioHXj79iQHKdU27kJ6hsGG94=
 golang.org/x/sys v0.0.0-20210630005230-0f9fa26af87c/go.mod h1:oPkhp1MJrh7nUepCBck5+mAzfO9JrbApNNgaTdGDITg=
 golang.org/x/sys v0.0.0-20210927094055-39ccf1dd6fa6/go.mod h1:oPkhp1MJrh7nUepCBck5+mAzfO9JrbApNNgaTdGDITg=
+golang.org/x/sys v0.1.0/go.mod h1:oPkhp1MJrh7nUepCBck5+mAzfO9JrbApNNgaTdGDITg=
